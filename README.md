@@ -1,1 +1,1 @@
-# Scaling Vision Pre-Training to 4K Resolution
+Project page for PS3.
