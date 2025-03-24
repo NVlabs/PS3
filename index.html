@@ -679,6 +679,12 @@
         }
 
         /* Dark mode */
+
+        /* Add this new style for reference links */
+        .reference-link {
+            color: inherit; /* Keeps the original text color */
+            text-decoration: underline; /* Adds underline */
+        }
     </style>
 </head>
 
@@ -1021,14 +1027,14 @@
         <div class="description-content">
             <h2>Why 4K Resolution?</h2>
             <p>
-                Previous vision models (e.g., CLIP, SiGLIP) are all pre-trained at low resolution such as 384x384.
+                Previous vision models (e.g., <a href="https://arxiv.org/abs/2103.00020" target="_blank" class="reference-link">CLIP</a>, <a href="https://arxiv.org/abs/2303.15343" target="_blank" class="reference-link">SigLIP</a>) are all pre-trained at low resolution such as 384x384.
                 However, in real-world applications, we often need to process high-resolution images such as 4K resolution. 
                 Below shows an example where 4K resolution is required to recognize the stop sign while driving.
             </p>
 
             <h2>Why Pre-Train at 4K Resolution?</h2>
             <p>
-                Although previous methods such as S<sup>2</sup> and AnyRes can process high-res images without high-res pre-training, 
+                Although previous methods such as <a href="https://arxiv.org/abs/2403.13043" target="_blank" class="reference-link">S<sup>2</sup></a> and <a href="https://llava-vl.github.io/blog/2024-01-30-llava-next/" target="_blank" class="reference-link">AnyRes</a> can process high-res images without high-res pre-training, 
                 we find that pre-training on high-res images improves the performance because it can utilize the large-scale pre-training data to learn high-quality high-res features.
                 Below we can see that <strong><span style="color: #f4b263;">PS3</span></strong>, pre-trained at 4K resolution, clearly improves over baselines like <strong><span style="color: #c3dfd4;">S<sup>2</sup></span></strong> and <strong><span style="color: #6a926a;">AnyRes</span></strong>.
             </p>
@@ -1038,7 +1044,7 @@
         <div class="description-content">
             <h2>Why We Can Do It But Previous Methods Can't?</h2>
             <p>
-                Previous vision pre-training like CLIP and SigLIPcan't scale to high resolution because it's too expensive. 
+                Previous vision pre-training like <a href="https://arxiv.org/abs/2103.00020" target="_blank" class="reference-link">CLIP</a> and <a href="https://arxiv.org/abs/2303.15343" target="_blank" class="reference-link">SigLIP</a> can't scale to high resolution because it's too expensive. 
                 The vision model needs to encode the whole image which is at least quadratic in compute.
                 However, for high-res images, you usually don't need to look at the whole image.
                 For example, in the figure above, you only need to look at the stop sign to answer that question.
@@ -1095,8 +1101,8 @@
         <div class="description-content">
             <h2>SOTA Performance and Efficiency</h2>
             <p>
-                Compared to state-of-the-art MLLMs such as NVILA and Qwen2-VL, VILA-HD achieves competitive performance across all the benchmarks including Chart, Doc, OCR, and natural image understanding, 
-                and sets new SOTA result on benchmarks that require high-res perception such as V<sup>*</sup>Bench.
+                Compared to state-of-the-art MLLMs such as <a href="https://arxiv.org/abs/2412.04468" target="_blank" class="reference-link">NVILA</a> and <a href="https://arxiv.org/abs/2409.12191" target="_blank" class="reference-link">Qwen2-VL</a>, VILA-HD achieves competitive performance across all the benchmarks including Chart, Doc, OCR, and natural image understanding, 
+                and sets new SOTA result on benchmarks that require high-res perception such as <a href="https://arxiv.org/abs/2312.14135" target="_blank" class="reference-link">V<sup>*</sup>Bench</a>.
             </p>
 
             <img src="asset/sota_mllm.png" alt="motivation" class="inserted-image-noshadow">
@@ -1145,7 +1151,7 @@
             <h2>VILA-HD achieves SOTA Performance and Efficiency on 4KPro</h2>
             <p>
                 VILA-HD with PS3 show better scaling curves than baselines without high-res pre-training.
-                VILA-HD also achieves SOTA performance and better efficiency than previous MLLMs including Qwen2-VL.
+                VILA-HD also achieves SOTA performance and better efficiency than previous MLLMs including <a href="https://arxiv.org/abs/2409.12191" target="_blank" class="reference-link">Qwen2-VL</a>.
             </p>
             <img src="asset/sota_4kpro.png" alt="motivation" class="inserted-image-noshadow">
         </div>
