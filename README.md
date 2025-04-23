@@ -4,6 +4,7 @@
 
 [![website](https://img.shields.io/badge/website-76b900?style=for-the-badge&logo=safari&labelColor=555555)](https://nvlabs.github.io/PS3/)
 [![Arxiv](https://img.shields.io/badge/Arxiv-b31b1b?style=for-the-badge&logo=arxiv&labelColor=555555)](https://arxiv.org/abs/2503.19903)
+[![VILA-HD Demo](https://img.shields.io/badge/-VILA--HD_Demo-brightgreen?style=for-the-badge&logo=huggingface&labelColor=555555&color=ff6e00)](https://huggingface.co/spaces/bfshi/VILA-HD-demo)
 [![PS3 Models](https://img.shields.io/badge/PS3%20Models%20(Coming%20soon)-ffd21e?style=for-the-badge&logo=huggingface&labelColor=555555)]()
 [![VILA-HD Models](https://img.shields.io/badge/VILA--HD%20Models%20(Coming%20soon)-ffd21e?style=for-the-badge&logo=huggingface&labelColor=555555)]()
 [![VILA-HD Code](https://img.shields.io/badge/VILA--HD%20Code%20(Coming%20soon)-181717?style=for-the-badge&logo=github&labelColor=555555)]()
@@ -31,5 +32,6 @@
 <hr style="border: 2px solid gray;"></hr>
 
 ## Latest Updates
-- [2025.2.24] Initial paper release. Code and weights of PS3 and VILA-HD will be released very soon!
+- [2025.4.22] Demo of VILA-HD is released! Welcome to give it a try. We are actively improving the model so any feedback is welcome!
+- [2025.3.24] Initial paper release. Code and weights of PS3 and VILA-HD will be released very soon!
 
