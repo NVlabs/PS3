@@ -583,6 +583,14 @@
                 margin-right: auto;
             }
 
+            .inserted-image-noshadow-tall-figure {
+                max-width: 840px;
+                /* Limit the width to 80% of the screen */
+                margin-left: auto;
+                /* Center the image horizontally */
+                margin-right: auto;
+            }
+
             .inserted-image-noshadow-small {
                 max-width: 600px;
                 /* Limit the width to 80% of the screen */
@@ -1069,6 +1077,15 @@
             <img src="asset/qualitative_patch_selection.png" alt="local region" class="inserted-image-noshadow">
         </div>
 
+        <div class="description-content">
+            <h2>SOTA Performance of PS3</h2>
+            <p>
+                When connected to MLLMs (see VILA-HD section below), PS3 achieves SOTA performance compared to existing vision encoders such as SigLIP2 and Perception Encoder on 23 benchmarks.
+            </p>
+
+            <!-- <img src="asset/ps3_results.png" alt="motivation" class="inserted-image-noshadow"> -->
+            <img src="asset/ps3_results.png" alt="motivation" class="inserted-image-noshadow-tall-figure">
+        </div>
 
 
 
@@ -1105,11 +1122,13 @@
         <div class="description-content">
             <h2>SOTA Performance and Efficiency</h2>
             <p>
-                Compared to state-of-the-art MLLMs such as <a href="https://arxiv.org/abs/2412.04468" target="_blank" class="reference-link">NVILA</a> and <a href="https://arxiv.org/abs/2409.12191" target="_blank" class="reference-link">Qwen2-VL</a>, VILA-HD achieves competitive performance across all the benchmarks including Chart, Doc, OCR, and natural image understanding, 
-                and sets new SOTA result on benchmarks that require high-res perception such as <a href="https://arxiv.org/abs/2312.14135" target="_blank" class="reference-link">V<sup>*</sup>Bench</a>.
+                Compared to state-of-the-art MLLMs such as <a href="https://arxiv.org/abs/2412.04468" target="_blank" class="reference-link">NVILA</a> and <a href="https://arxiv.org/abs/2502.13923" target="_blank" class="reference-link">Qwen2.5-VL</a>, VILA-HD achieves competitive performance across various high-res benchmarks, 
+                and is also competitive on general benchmarks.
             </p>
 
-            <img src="asset/sota_mllm.png" alt="motivation" class="inserted-image-noshadow">
+            <img src="asset/vila_hd_highres_results.png" alt="motivation" class="inserted-image-noshadow">
+
+            <img src="asset/vila_hd_general_results.png" alt="motivation" class="inserted-image-noshadow-tall-figure">
 
             <p>
                 VILA-HD also achieves best efficiency compared to previous token pruning approaches, thanks to the top-down patch selection mechanism of PS3. 
@@ -1117,7 +1136,7 @@
                 PS3 is also the only approach that's able to process 4K resolution.
             </p>
 
-            <img src="asset/sota_efficiency.png" alt="motivation" class="inserted-image-noshadow">
+            <img src="asset/sota_efficiency.png" alt="motivation" class="inserted-image-noshadow-tall-figure">
         </div>
 
         
@@ -1157,7 +1176,7 @@
                 VILA-HD with PS3 show better scaling curves than baselines without high-res pre-training.
                 VILA-HD also achieves SOTA performance and better efficiency than previous MLLMs including <a href="https://arxiv.org/abs/2409.12191" target="_blank" class="reference-link">Qwen2-VL</a>.
             </p>
-            <img src="asset/sota_4kpro.png" alt="motivation" class="inserted-image-noshadow">
+            <img src="asset/4kpro_results_website.png" alt="motivation" class="inserted-image-noshadow">
         </div>
 
 
