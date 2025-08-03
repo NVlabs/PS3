@@ -108,7 +108,7 @@ class PS3VisionConfig(PretrainedConfig):
 
         config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
 
-        # get the vision config dict if we are loading from SiglipConfig
+        # get the vision config dict if we are loading from PS3Config
         if config_dict.get("model_type") == "ps3":
             config_dict = config_dict["vision_config"]
 
@@ -182,7 +182,7 @@ class PS3TextConfig(PretrainedConfig):
 
         config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
 
-        # get the text config dict if we are loading from SiglipConfig
+        # get the text config dict if we are loading from PS3Config
         if config_dict.get("model_type") == "ps3":
             config_dict = config_dict["text_config"]
 
@@ -205,11 +205,11 @@ class PS3Config(PretrainedConfig):
 
         if text_config is None:
             text_config = {}
-            logger.info("`text_config` is `None`. Initializing the `SiglipTextConfig` with default values.")
+            logger.info("`text_config` is `None`. Initializing the `PS3TextConfig` with default values.")
 
         if vision_config is None:
             vision_config = {}
-            logger.info("`vision_config` is `None`. initializing the `SiglipVisionConfig` with default values.")
+            logger.info("`vision_config` is `None`. initializing the `PS3VisionConfig` with default values.")
 
         self.text_config = PS3TextConfig(**text_config)
         self.vision_config = PS3VisionConfig(**vision_config)
