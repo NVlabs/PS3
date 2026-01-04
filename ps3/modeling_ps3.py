@@ -148,6 +148,7 @@ class PS3VisionEncoder(nn.Module):
             # Automatically distribute token selection budget across scales based on pixel counts
             pixels_each_scale = [s**2 for s in self.ps3_scales]
             self.max_select_num_each_scale = [int(config.max_select_num * pixels_each_scale[i] / sum(pixels_each_scale[1:])) for i in range(1, len(pixels_each_scale))]
+            self.max_select_num_each_scale[-1] += config.max_select_num - sum(self.max_select_num_each_scale)
 
         # Feature projection for token selection
         self.selection_feature_proj = Mlp(in_features=self.width * len(self.config.select_based_on_layer), hidden_features=self.width * len(self.config.select_based_on_layer), out_features=self.width * (len(self.ps3_scales) - 1), norm_layer=nn.LayerNorm)
@@ -391,6 +392,7 @@ class PS3VisionEncoder(nn.Module):
             if num_select_token is not None:
                 assert num_select_token <= sum(self.max_select_num_each_scale), "Number of selected tokens must be less than the maximum number of selected tokens"
                 select_num_each_scale = [int(x * num_select_token / sum(self.max_select_num_each_scale)) for x in self.max_select_num_each_scale]
+                select_num_each_scale[-1] += num_select_token - sum(select_num_each_scale)
             if only_select_first_n_scale is not None:
                 select_num_each_scale = [int(x / sum(select_num_each_scale[:only_select_first_n_scale]) * sum(select_num_each_scale)) if i < only_select_first_n_scale else 1
                                         for i, x in enumerate(select_num_each_scale)]
